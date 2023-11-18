@@ -1,9 +1,14 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
+import productList from '@/data/productList.json'
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+    state: {
+        productList,
+    },
+    getters: {
+        getProductList: ({ productList }) => productList,
+    },
+    mutations: {},
+    actions: {},
+    modules: {},
+})
